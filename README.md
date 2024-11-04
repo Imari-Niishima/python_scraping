@@ -1,3 +1,6 @@
 # python_scraping
 Red Hatとかのスクレイピングお試し
-git push -u origin mainでバージョン管理
+
+git add .
+git commit -m "message"
+git push -u origin main
