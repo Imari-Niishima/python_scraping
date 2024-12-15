@@ -27,7 +27,7 @@ if __name__ == "__main__":
     for a_each in soup_base.find_all("h1"):
         text_cand = a_each.get_text()
 
-        print(text_cand)
+        #print(text_cand)
         #sys.exit()
 
         
@@ -43,14 +43,17 @@ if __name__ == "__main__":
             pre_version = re.split("[.]", pre_version[0])
             now_version = re.split("[.]", now_version[0])
 
-
+            
+            #この処理はバージョンを受け取ってから考える？
+            #
             for i in range(len(pre_version)):
                 if pre_version[i] < now_version[i]:
                     print("version apdated!\n")
                     print(text_cand.rstrip("¶"))
-                    #return text_cand.rstrip("¶")
+                    return text_cand.rstrip("¶")
+            
 
-    #return apache_version
+    #return now_version
             
 
     
