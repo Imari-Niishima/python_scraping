@@ -16,8 +16,8 @@ import sys
 from bs4 import BeautifulSoup
 
 
-#def version_check(old_version, old_date):
-if __name__ == "__main__":
+def version_check(old_version, old_date):
+#if __name__ == "__main__":
     
     #old_version = re.findall("nginx-(.*)\n", old_version)
     
@@ -62,10 +62,11 @@ if __name__ == "__main__":
                     now_date = re.findall("(.*)\nnginx", text_cand)
 
                     print(str("nginx-"+now_version), now_date)
-                    #return str("nginx-"+now_version)), now_date
+                    #メイン関数で試すときはこの下にコメント
+                    return str("nginx-"+now_version)), now_date
         
-
-    #return str("nginx-"+old_version)), old_date
+    #メイン関数で試すときはこの下にコメント
+    return str("nginx-"+old_version)), old_date
             
 
     

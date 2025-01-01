@@ -16,8 +16,8 @@ import sys
 from bs4 import BeautifulSoup
 
 
-#def version_check(apache_version):
-if __name__ == "__main__":
+def version_check(apache_version):
+#if __name__ == "__main__":
     url_base = "https://httpd.apache.org/"
 
     html_base = requests.get(url_base).text
@@ -52,8 +52,8 @@ if __name__ == "__main__":
                     print(text_cand.rstrip("¶"))
                     return text_cand.rstrip("¶")
             
-
-    #return now_version
+    #メイン関数で試すときはこの下にコメント
+    return apache_version
             
 
     
